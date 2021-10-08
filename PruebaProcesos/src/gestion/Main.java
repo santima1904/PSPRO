@@ -21,7 +21,7 @@ public class Main {
 
         ProcessBuilder pb = new ProcessBuilder("cmd");
 
-
+        //pb.inheritIO();Esto para el caso de no tener redireccionada la salida, para que se redierccione automaticamente
         pb.redirectInput(fichero);
         pb.redirectOutput(salida);
 
@@ -34,7 +34,7 @@ public class Main {
 
     }
 
-    /*
+
     public static void abrirBlocNotas(ProcessBuilder pb){
 
         pb.inheritIO();//para usar la consola java
@@ -55,5 +55,5 @@ public class Main {
         }
     }
 
-     */
+
 }
