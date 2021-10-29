@@ -18,17 +18,18 @@ public class Consumidor implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
-            synchronized (cont) {
-                while (cont.vacio()) {
-                    try {
-                        cont.wait();
-                    } catch (InterruptedException ex) {
+        try {
+            while (!Thread.currentThread().isInterrupted()) {
+                synchronized (cont) {
+                    while (cont.vacio()) {
+                            cont.wait();
                     }
+                    consumirDato(cont.get());
+                    cont.notifyAll();
                 }
-                consumirDato(cont.get());
-                cont.notifyAll();
             }
+        }catch (InterruptedException e){
         }
+        System.out.println("***HILO INTERRUMPIDO***"+this.miNombre);
     }
 }

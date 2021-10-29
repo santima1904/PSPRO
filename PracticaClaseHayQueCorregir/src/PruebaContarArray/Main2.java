@@ -24,5 +24,22 @@ public class Main2 {
         hcons3.start();
         hcons4.start();
         hcons5.start();
+
+        try {
+            Thread.sleep(10000);
+            hcons1.interrupt();
+            hcons2.interrupt();
+            hcons3.interrupt();
+            hcons4.interrupt();
+            hcons5.interrupt();
+            hprod1.interrupt();
+            hprod2.interrupt();
+            hprod3.interrupt();
+            hprod4.interrupt();
+            hprod5.interrupt();
+
+        }catch (InterruptedException e) {
+            System.out.println("INTERRUMPIDO EL HILO PRINCIPAL");
+        }
     }
 }

@@ -25,21 +25,22 @@ public class Productor  implements Runnable {
 
     @Override
     public void run() {
-        int [] dato;
-        while (true) {
+        int[] dato;
+        try {
+            while (!Thread.currentThread().isInterrupted()) {
+                dato = producirDato();
 
-            dato = producirDato();
-            synchronized (this.datos) {
-                while (this.datos.maximoAlcanzado()) {
-                    try {
-                        this.datos.wait();
-                    } catch (InterruptedException ex) {
+                synchronized (this.datos) {
+                    while (this.datos.maximoAlcanzado() && !Thread.currentThread().isInterrupted()) {
+                            this.datos.wait();
                     }
+                    this.datos.put(dato);
+                    this.datos.notifyAll();
                 }
-                this.datos.put(dato);
-                this.datos.notifyAll();
             }
+        }catch (InterruptedException e){
         }
+        System.out.println("***HILO INTERRUMPIDO***" + this.nombre);
     }
 }
 
