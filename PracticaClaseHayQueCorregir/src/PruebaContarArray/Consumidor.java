@@ -1,35 +1,54 @@
 package PruebaContarArray;
 
 public class Consumidor implements Runnable {
-    final Contenedor2 cont;
-    String miNombre;
+    private final Contenedor2 datos;
+    private final int númeroConsumidor;
+    private boolean interrumpir = false;
+    private int[] dato = null;
 
-    Consumidor(Contenedor2 cont, String miNombre) {
-        this.cont = cont;
-        this.miNombre = miNombre;
-    }
-    private void consumirDato(int[] numeros){
-        int sumaTotal=0;
-        for (int i = 0; i < 100; i++) {
-            sumaTotal+=numeros[i];
-        }
-        System.out.println("El total del array es: "+sumaTotal);
+    public Consumidor(Contenedor2 datos, int númeroConsumidor) {
+        this.númeroConsumidor = númeroConsumidor;
+        this.datos = datos;
     }
 
     @Override
     public void run() {
-        try {
-            while (!Thread.currentThread().isInterrupted()) {
-                synchronized (cont) {
-                    while (cont.vacio()) {
-                            cont.wait();
-                    }
-                    consumirDato(cont.get());
-                    cont.notifyAll();
-                }
-            }
-        }catch (InterruptedException e){
+        while (!interrupciónLanzada()) {
+            obtenerDato();
+            if (!interrupciónLanzada())
+                consumirDato(dato);
         }
-        System.out.println("***HILO INTERRUMPIDO***"+this.miNombre);
+        System.out.printf("Hilo consumidor %d interrumpido", númeroConsumidor);
+    }
+
+    private void obtenerDato() {
+        synchronized (datos) {
+            while (datos.vacio() && !interrupciónLanzada()) {
+                esperar();
+            }
+            if (!interrupciónLanzada())
+                dato = datos.get();
+            datos.notifyAll();
+        }
+    }
+
+    private void esperar() {
+        try {
+            datos.wait();
+        } catch (InterruptedException ex) {
+            interrumpir = true;
+        }
+    }
+
+    private boolean interrupciónLanzada() {
+        return !Thread.currentThread().isInterrupted()
+                && !interrumpir;
+    }
+
+    private void consumirDato(int[] dato) {
+        int suma = 0;
+        for (int i = 0; i < dato.length; i++)
+            suma += dato[i];
+        System.out.println(suma);
     }
 }

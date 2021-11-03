@@ -4,6 +4,7 @@ public class Main2 {
     public static void main(String[] args) {
         Contenedor2 almacen = new Contenedor2();
 
+        try {
         Thread hprod1 = new Thread(new Productor(almacen, "P1"));
         Thread hprod2 = new Thread(new Productor(almacen, "P2"));
         Thread hprod3 = new Thread(new Productor(almacen, "P3"));
@@ -25,7 +26,7 @@ public class Main2 {
         hcons4.start();
         hcons5.start();
 
-        try {
+
             Thread.sleep(10000);
             hcons1.interrupt();
             hcons2.interrupt();
@@ -39,7 +40,7 @@ public class Main2 {
             hprod5.interrupt();
 
         }catch (InterruptedException e) {
-            System.out.println("INTERRUMPIDO EL HILO PRINCIPAL");
+            //System.out.println("INTERRUMPIDO EL HILO PRINCIPAL");
         }
     }
 }

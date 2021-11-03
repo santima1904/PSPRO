@@ -29,7 +29,6 @@ public class Productor  implements Runnable {
         try {
             while (!Thread.currentThread().isInterrupted()) {
                 dato = producirDato();
-
                 synchronized (this.datos) {
                     while (this.datos.maximoAlcanzado() && !Thread.currentThread().isInterrupted()) {
                             this.datos.wait();
