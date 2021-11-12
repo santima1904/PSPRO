@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Comienzo/Comienzo.iml" filepath="$PROJECT_DIR$/Comienzo/Comienzo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ComienzoHilo/ComienzoHilo.iml" filepath="$PROJECT_DIR$/ComienzoHilo/ComienzoHilo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PSPRO.iml" filepath="$PROJECT_DIR$/.idea/PSPRO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PruebaProcesos/PruebaProcesos.iml" filepath="$PROJECT_DIR$/PruebaProcesos/PruebaProcesos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Swing/Swing.iml" filepath="$PROJECT_DIR$/Swing/Swing.iml" />
+    </modules>
+  </component>
+</project>

@@ -20,10 +20,30 @@ public class Main {
 
     public static void main(String[] args) {
         List<int[]> listaArray = new ArrayList<>();
+        List<Thread> listaHilos = new ArrayList<>();
 
-        for (int i = 0; i<NUMERO_ARRAY; i++){
+        for (int i = 0; i < NUMERO_ARRAY; i++) {
             listaArray.add(rellenarArray());
+            listaHilos.add(new Thread(new Hilo("" + i, listaArray.get(i))));
         }
 
+        for (Thread hilo : listaHilos) {
+            hilo.start();
+            try {
+                hilo.join();
+            } catch (InterruptedException e) {
+            }
+        }
+
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+        }
+
+        for (Thread hilo : listaHilos) {
+            if (hilo.isAlive()) {
+                hilo.interrupt();
+            }
+        }
     }
 }
