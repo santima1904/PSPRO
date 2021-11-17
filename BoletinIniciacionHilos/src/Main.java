@@ -1,16 +1,17 @@
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
     public static final int NUMERO_MAXIMO = 10000;
     public static final int NUMERO_ARRAY = 20;
-    public static final int POSICIONES_ARRAY = 20;
+    public static final int POSICIONES_ARRAY = 1000000;
 
     private static int[] rellenarArray(){
         int[] array = new int[POSICIONES_ARRAY];
-        SecureRandom sr = new SecureRandom();
+        Random sr = new Random();
 
         for (int i = 0; i<array.length; i++){
             array[i] = sr.nextInt(NUMERO_MAXIMO)+1;
@@ -29,14 +30,10 @@ public class Main {
 
         for (Thread hilo : listaHilos) {
             hilo.start();
-            try {
-                hilo.join();
-            } catch (InterruptedException e) {
-            }
         }
 
         try {
-            Thread.sleep(1);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
         }
 
@@ -45,5 +42,6 @@ public class Main {
                 hilo.interrupt();
             }
         }
+        System.out.println("Calculos interrumpidos");
     }
 }

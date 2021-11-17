@@ -28,6 +28,8 @@ public class Hilo implements Runnable{
                         "El máximo es: " + maximo + "\n" +
                         "La media  es: " + media
                 );
+            }else{
+                System.out.println("Hilo "+nombre+" interrumpido");
             }
         }
     }
