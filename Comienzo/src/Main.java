@@ -39,7 +39,12 @@ public class Main {
 
         try {
             Process proceso = pb.start();//empezar proceso
-            proceso.waitFor();
+
+            while(proceso.isAlive()){//mientras este activo, va a seguir el bucle
+                System.out.println("Esta vivo");
+                Thread.sleep(5000);//mandar a dormir el proceso principal durante el tiempo introducido(milisegundos)
+            }
+
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

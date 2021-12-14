@@ -1,0 +1,46 @@
+Microsoft Windows [Versi¢n 10.0.19043.1237]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+D:\ProyectosSanti\PSPRO\PruebaProcesos>dir
+ El volumen de la unidad D es DATOS
+ El n£mero de serie del volumen es: 36EB-CD49
+
+ Directorio de D:\ProyectosSanti\PSPRO\PruebaProcesos
+
+01/10/2021  13:26    <DIR>          .
+01/10/2021  13:26    <DIR>          ..
+01/10/2021  13:28    <DIR>          .idea
+29/09/2021  12:44                26 comandos.txt
+24/09/2021  13:24    <DIR>          out
+24/09/2021  13:16               433 PruebaProcesos.iml
+01/10/2021  13:28                 0 salida.txt
+24/09/2021  13:23    <DIR>          src
+               3 archivos            459 bytes
+               5 dirs  499.835.822.080 bytes libres
+
+D:\ProyectosSanti\PSPRO\PruebaProcesos>dir *.txt
+ El volumen de la unidad D es DATOS
+ El n£mero de serie del volumen es: 36EB-CD49
+
+ Directorio de D:\ProyectosSanti\PSPRO\PruebaProcesos
+
+29/09/2021  12:44                26 comandos.txt
+01/10/2021  13:28                 0 salida.txt
+               2 archivos             26 bytes
+               0 dirs  499.835.822.080 bytes libres
+
+D:\ProyectosSanti\PSPRO\PruebaProcesos>dir /a:d
+ El volumen de la unidad D es DATOS
+ El n£mero de serie del volumen es: 36EB-CD49
+
+ Directorio de D:\ProyectosSanti\PSPRO\PruebaProcesos
+
+01/10/2021  13:26    <DIR>          .
+01/10/2021  13:26    <DIR>          ..
+01/10/2021  13:28    <DIR>          .idea
+24/09/2021  13:24    <DIR>          out
+24/09/2021  13:23    <DIR>          src
+               0 archivos              0 bytes
+               5 dirs  499.835.822.080 bytes libres
+
+D:\ProyectosSanti\PSPRO\PruebaProcesos>

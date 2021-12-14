@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa239e14-726e-4cee-a4f3-b0adf68f36ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Comienzo/Comienzo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaProcesos/PruebaProcesos.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="0a0e9d39-a725-4655-b563-cb32a2ad602a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ymHO8NBujeoPS5D6NGkcZZEoQ6" />
+  <component name="ProjectId" id="1zXXt8OTda2kVA7QygwJnF5VSh6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,22 +19,34 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa239e14-726e-4cee-a4f3-b0adf68f36ff" name="Default Changelist" comment="" />
-      <created>1632849808861</created>
+      <changelist id="0a0e9d39-a725-4655-b563-cb32a2ad602a" name="Changes" comment="" />
+      <created>1634295619082</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632849808861</updated>
-      <workItem from="1632849810352" duration="24000" />
-      <workItem from="1634841522961" duration="134000" />
+      <updated>1634295619082</updated>
+      <workItem from="1634295621534" duration="130000" />
+      <workItem from="1634296573478" duration="696000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
