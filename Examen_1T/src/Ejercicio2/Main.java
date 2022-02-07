@@ -11,14 +11,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Thread> hilos = new ArrayList<>();
+        List<Thread> hilos = crear();
+        iniciar(hilos);
+    }
 
-        for (int i = 0;i < NUMERO_HILOS;i++){
+    private static List<Thread> crear() {
+        List<Thread> hilos = new ArrayList<Thread>();
+        for (int i = 0; i < NUMERO_HILOS; i++) {
             hilos.add(new Thread(new Hilo()));
         }
+        return hilos;
+    }
 
-        for (Thread hilo:hilos) {
+    private static void iniciar(List<Thread> hilos) {
+        for (Thread hilo :
+                hilos) {
             hilo.start();
         }
     }
+
 }

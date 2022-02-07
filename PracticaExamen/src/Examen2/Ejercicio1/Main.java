@@ -1,7 +1,5 @@
 package Examen2.Ejercicio1;
 
-import Examen2.Ejercicio1.Hilo;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
